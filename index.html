@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" href="assets/css/styles.css" /> -->
+    <link rel="stylesheet" href="assets/css/new-styles.css" />
+  </head>
+
+  <body class="guess-input">
+    <header class="header-container">
+      <div class="container-fluid">
+        <h1 class="header__text">GUESS THE NUMBER</h1>
+      </div>
+    </header>
+    <div class="main-container">
+      <div class="form-group">
+        <div class="container" id="form-container">
+          <div class="counter">
+            <div id="clock">
+              <h1>Time Left</h1>
+              <h1 id="time">
+                <span>00:00</span>
+                <span class="minutes"></span>
+                <span class="seconds"></span>
+              </h1>
+            </div>
+          </div>
+          <input
+            class="form-control-lg form-control"
+            id="number-guess"
+            name="number-guess"
+            type="number"
+            placeholder="What is your Guess?"
+            autofocus
+          />
+          <div class="result">
+            <!-- <div class="alert alert-success" role="alert"><span><strong>Great Job! </strong>You guessed right.</span></div> -->
+          </div>
+          <div class="buttons">
+            <button
+              class="btn btn-primary btn-lg text-nowrap button"
+              id="check-guess"
+              type="button"
+            >
+              Check My Guess
+            </button>
+            <button
+              class="btn btn-light btn-lg text-nowrap button"
+              id="reset-values"
+              type="button"
+            >
+              Reset
+            </button>
+          </div>
+          <div id="history"></div>
+        </div>
+      </div>
+      <div class="score-board">
+        <div id="score-container">
+          <h1>Your Score</h1>
+          <div class="scores">
+            <div class="row">
+              <div class="col" id="count-correct-guesses">
+                <h5>Correct Guesses</h5>
+                <span class="count-correct">00</span>
+              </div>
+              <div class="col" id="count-total-guesses">
+                <h5>Total Guesses</h5>
+                <span class="count-total">00</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div id="guess-history">
+                  <h3>Your Guess History</h3>
+                  <div id="history-content"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div id="welcome"></div>
+    <div id="replay"></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
