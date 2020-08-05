@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   max-width: 100%;
@@ -12,9 +15,11 @@ body {
 }
 
 .header-container {
-  min-width: 611px;
+  /* min-width: 611px; */
   background-color: #303f9f;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
 }
 
 .guess-input {
@@ -23,7 +28,7 @@ body {
 
 .header__text {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 15px;
 }
 
@@ -52,8 +57,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-right: 20px;
-  width: 550px;
+  min-width: 300px;
 }
 
 .welcome {
@@ -77,14 +81,22 @@ body {
 }
 
 .counter h1 {
-  color: #757575;
+  color: #fff;
   margin-top: 10px;
   text-align: center;
+  font-size: 1.9rem;
+}
+
+@media (min-width: 760px) {
+  .counter h1,
+  .score-board h1 {
+    font-size: 2.5rem !important;
+  }
 }
 
 .counter {
-  width: 300px;
-  margin-bottom: 30px;
+  width: 250px;
+  margin-bottom: 20px;
 }
 
 #form-container {
@@ -105,13 +117,14 @@ body {
   background-color: #00186f;
 }
 
-#clock h1 {
+/* #clock h1 {
   color: #fff;
-}
+} */
 
 .score-board h1 {
   text-align: center;
   color: #666ad1;
+  font-size: 1.9rem;
 }
 
 @media (min-width: 992px) {
@@ -127,6 +140,14 @@ body {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   margin-top: 60px;
   border-radius: 8px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .score-board {
+    display: block;
+  }
 }
 
 .guess-scores {
@@ -210,7 +231,21 @@ body {
 }
 
 .main-container {
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container .form-control {
+  width: 300px;
+}
+
+@media (min-width: 992px) {
+  .main-container {
+    flex-direction: row;
+  }
 }
 
 #score-container {
